@@ -1,0 +1,27 @@
+body {
+  background-color: black !important;
+  color: white !important;
+}
+body .wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 35px 0px;
+  height: 100%;
+  width: 100%;
+}
+body .wrapper .talentTable {
+  padding: 35px;
+  border: solid 1px red;
+}
+body .wrapper .talentTable .tableContainer {
+  border: solid 1px green;
+}
+body .wrapper .talentTable .tableContainer .talentRow {
+  display: flex;
+}
+body .wrapper .talentTable .tableContainer .talentRow .talent {
+  text-align: center;
+  width: 33%;
+}
