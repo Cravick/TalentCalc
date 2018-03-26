@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Vermintide 2 Talent Calculator</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="../node_modules/angular/angular.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../dist/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/971791682734706689/ALim5pHH_400x400.jpg">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper" ng-app="talentCalc">
+            <div class="talentTable" ng-controller="saltzpyreController">
+                <div class="tableContainer">
+                    <div class="talentRow">
+                        <div class="talent col-xs-4" ng-repeat="talent in tierOne">
+                            <h2 class="name">{{talent.name}}</h2>
+                            <p class="description">{{talent.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modules -->
+    <script src="../src/app.js"></script>
+    <!-- Controllers -->
+    <script src="../src/js/controllers/saltzpyreController.js"></script>
+    <!-- Directives -->
+    <script src="../src/js/directives/tierOne.js"></script>
+</body>
+</html>

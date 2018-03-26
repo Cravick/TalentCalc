@@ -1,0 +1,1 @@
+var tc = angular.module("talentCalc", []);
