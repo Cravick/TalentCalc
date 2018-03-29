@@ -1,8 +1,6 @@
 @primary-color: red;
 
 body {
-    background-color: black !important;
-    color: white !important;
 
     .wrapper {
         top: 0;
@@ -17,15 +15,66 @@ body {
             padding: 35px;
             border: solid 1px red;
 
-            .tableContainer {
-                border: solid 1px green;
+            .subClassRow {
+                display: inline-flex;
+                margin: 15px 0;
+                width: 100%;
 
-                .talentRow {
+                .subClass {
+                    text-align: center;
+                    width:33.5%;
+                }
+            }
+
+            .innerTalentTable {
+                display: inline-flex;
+                width: 100%;
+
+                .levelColumn {
                     display: flex;
-                    
-                    .talent {
+                    flex-direction: column;
+                    width: 10%;
+
+                    .level {
+                        flex-grow: 1;
                         text-align: center;
-                        width: 33%
+                    }
+                }
+
+                .tableContainer {
+                    border: solid 1px green;
+                    width: 90%;
+
+                    .talentRow {
+                        display: flex;
+                        
+                        .talent {
+                            text-align: center;
+                            width: 33%;
+                            border: solid 1px whitesmoke;
+
+                            .talentWrapper {
+                                height: 100%;
+
+                                h2 {
+                                    font-size: 20px;
+                                }
+                                p {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .active {
+                                color: #fff;
+                                border-radius: 10px;
+                                background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+                                background-color: rgba(0, 0, 0, 0.1);
+                                font-size: 12px;
+                                font-weight: normal;
+                                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+                                box-shadow: inset 0 1px 20px rgba(0, 0, 0, .35), 0 1px 0 rgba(255, 255, 255, 0.25);
+                            }
+                        }
                     }
                 }
             }
