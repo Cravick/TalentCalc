@@ -1,7 +1,3 @@
-body {
-  background-color: black !important;
-  color: white !important;
-}
 body .wrapper {
   top: 0;
   left: 0;
@@ -15,13 +11,56 @@ body .wrapper .talentTable {
   padding: 35px;
   border: solid 1px red;
 }
-body .wrapper .talentTable .tableContainer {
-  border: solid 1px green;
+body .wrapper .talentTable .subClassRow {
+  display: inline-flex;
+  margin: 15px 0;
+  width: 100%;
 }
-body .wrapper .talentTable .tableContainer .talentRow {
+body .wrapper .talentTable .subClassRow .subClass {
+  text-align: center;
+  width: 33.5%;
+}
+body .wrapper .talentTable .innerTalentTable {
+  display: inline-flex;
+  width: 100%;
+}
+body .wrapper .talentTable .innerTalentTable .levelColumn {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+body .wrapper .talentTable .innerTalentTable .levelColumn .level {
+  flex-grow: 1;
+  text-align: center;
+}
+body .wrapper .talentTable .innerTalentTable .tableContainer {
+  border: solid 1px green;
+  width: 90%;
+}
+body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow {
   display: flex;
 }
-body .wrapper .talentTable .tableContainer .talentRow .talent {
+body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent {
   text-align: center;
   width: 33%;
+  border: solid 1px whitesmoke;
+}
+body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .talentWrapper {
+  height: 100%;
+}
+body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .talentWrapper h2 {
+  font-size: 20px;
+}
+body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .talentWrapper p {
+  font-size: 14px;
+}
+body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .active {
+  color: #fff;
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  font-weight: normal;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 20px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.25);
 }
