@@ -17,26 +17,34 @@
 <body>
     <div class="container">
         <div class="wrapper" ng-app="talentCalc">
-            <div class="talentTable" ng-controller="saltzpyreController">
-                <div class="subClassRow">
-                    <div class="subClass">1</div>
-                    <div class="subClass">2</div>
-                    <div class="subClass">3</div>
-                </div>
-                <div class="innerTalentTable">
-                    <div class="levelColumn">
-                        <div class="level">5</div>
-                        <div class="level">10</div>
-                        <div class="level">15</div>
-                        <div class="level">20</div>
-                        <div class="level">25</div>
-                    </div>
-                    <div class="tableContainer">
-                        <div class="talentRow" ng-repeat="tier in tiers">
-                            <div class="talent" ng-repeat="talent in tier">
-                                <div class="talentWrapper" ng-click="activate(talent.id, tier)" ng-class="{'active': talent.selected == true}">
-                                    <h2 class="name">{{talent.name}}</h2>
-                                    <p class="description">{{talent.description}}</p>
+            <div class="talentTable" ng-controller="heroController">
+                <div class="classWrapper" ng-repeat="hero in heroes">
+                    <div class="classContainer" ng-hide="hero.selected == false">
+                        <div class="mainClassRow">
+                            <div class="mainClass" ng-repeat="hero in heroes" ng-click="switchClass(hero, heroes)">{{hero.name}}</div>
+                        </div>
+                        <h4 style="text-align: center">{{hero.name}}</h4>
+                        <div class="subClassRow">
+                            <div class="subClass" ng-repeat="sub in hero.subs" ng-click="switchSpec(sub, hero.subs)">{{sub.name}}</div>
+                        </div>
+                        <div class="innerTalentTable">
+                            <div class="levelColumn">
+                                <div class="level">5</div>
+                                <div class="level">10</div>
+                                <div class="level">15</div>
+                                <div class="level">20</div>
+                                <div class="level">25</div>
+                            </div>
+                            <div class="tableContainer">
+                                <div "subClass" ng-repeat="sub in hero.subs">
+                                    <div class="talentRow" ng-repeat="tier in sub.tiers" ng-hide="sub.selected == false">
+                                        <div class="talent" ng-repeat="talent in tier">
+                                            <div class="talentWrapper" ng-click="activate(talent.id, tier)" ng-class="{'active': talent.selected == true}">
+                                                <h2 class="name">{{talent.name}}</h2>
+                                                <p class="description">{{talent.description}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +57,7 @@
     <!-- Modules -->
     <script src="../src/app.js"></script>
     <!-- Controllers -->
-    <script src="../src/js/controllers/saltzpyreController.js"></script>
+    <script src="../src/js/controllers/heroController.js"></script>
     <!-- Directives -->
     <script src="../src/js/directives/tierOne.js"></script>
 </body>

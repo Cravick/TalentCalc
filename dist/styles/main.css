@@ -11,6 +11,14 @@ body .wrapper .talentTable {
   padding: 35px;
   border: solid 1px red;
 }
+body .wrapper .talentTable .mainClassRow {
+  display: flex;
+  width: 100%;
+}
+body .wrapper .talentTable .mainClassRow .mainClass {
+  text-align: center;
+  width: 20%;
+}
 body .wrapper .talentTable .subClassRow {
   display: inline-flex;
   margin: 15px 0;
@@ -39,6 +47,7 @@ body .wrapper .talentTable .innerTalentTable .tableContainer {
 }
 body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow {
   display: flex;
+  height: 120px;
 }
 body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent {
   text-align: center;
@@ -47,12 +56,18 @@ body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent 
 }
 body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .talentWrapper {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .talentWrapper h2 {
   font-size: 20px;
+  margin-bottom: 5px;
 }
 body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .talentWrapper p {
   font-size: 14px;
+  margin-bottom: 5px;
 }
 body .wrapper .talentTable .innerTalentTable .tableContainer .talentRow .talent .active {
   color: #fff;
